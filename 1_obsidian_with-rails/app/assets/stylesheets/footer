@@ -1,0 +1,29 @@
+/* --- FOOTER --- */
+footer {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    
+}
+
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+}
+
+
+footer a:hover {
+    color: #c1c1bb;
+}
+
+
+footer p {
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.0rem;
+    color: #e8e3e3;
+    letter-spacing: 0.2rem
+}

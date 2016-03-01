@@ -1,0 +1,388 @@
+/* --- GLOBAL --- */
+
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+    /* height: 100%;
+    width: 100%; */
+}
+
+body {
+    background: image-url("background.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 62.5%; /* équivalent à 10px */
+    /* background-color: #000000;
+    color: #ffffff; */
+}
+
+
+aside {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+}
+
+
+.aside-title {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:baseline;
+    margin: auto;
+}
+
+aside h1 {
+    color: white;
+    font-size: 2.0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+aside a {
+    color: #c1c1bb;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+aside a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- NAVIGATION --- */
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+ul li {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.active {
+    color:#fff;
+    font-weight: 700;
+}
+
+nav a.active:hover {
+    cursor: default;
+}
+
+ul a {
+    color: #434343;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.3rem;
+    letter-spacing:normal;
+    margin-top: 50px;
+    
+}
+
+
+.icon-bar { /*  pour que le menu hamburger soit visible car couleur par defaut semblable au bac
+    */
+    background-color: white;
+}
+
+
+
+/* --- TITRE DU SITE --- */
+
+#website-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+#website-title h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 4em;
+    font-weight: 50px;
+    letter-spacing: 5px;
+}
+
+#website-title p {
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#636363;
+}
+
+
+
+/* --- VIDEOS --- */
+
+#videos-select {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    border-top: 1px solid graytext;
+    border-bottom: 1px solid graytext;
+}
+
+
+#videos-select article {
+    width: calc(100% / 3);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+#videos-select article:first-child {
+    display:flex;
+    flex-direction: column;
+    padding-right: 15px;
+}
+
+#videos-select article:nth-child(2) {
+    display:flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid graytext;
+    border-right: 1px solid graytext;
+}
+
+#videos-select article:nth-child(3) {
+    display:flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+#videos-select img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#videos-select a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+#videos-select a:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+
+/* --- UPCOMING GIGS --- */
+
+#gigs {
+    margin-bottom: 50px;
+    border-top: 1px solid graytext;
+}
+
+#gigs a { 
+    text-decoration: none; 
+}
+
+#gigs article:hover { 
+    text-decoration: underline;
+}
+
+#gigs article {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    border-bottom: 1px solid graytext;
+}
+
+.gig-infos {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#gigs h5 {
+    font-weight: 600;
+    font-size: 1.0rem;
+    padding: 20px 15px 20px 15px;
+    color: #d5d5d5;
+    flex-basis: 30px;
+    letter-spacing: normal;
+    text-transform: uppercase;
+}
+
+#gigs strong {
+    font-size: 2.0rem;
+    font-weight: bold;
+    flex-basis: 80px;
+    letter-spacing: normal;
+}
+
+#gigs em {
+    font-style: normal;
+    font-size: 1.5rem;
+    text-transform: none;
+    font-weight: bold;
+    color: #d5d5d5;
+    flex-basis: 350px;
+    letter-spacing: normal;
+}
+
+#gigs p {
+    text-transform: none;
+    color: #e0dddd;
+    letter-spacing: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: right;
+    margin-left: 200px;
+}
+
+.gig-all {
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.gig-all a {
+    color: #ffffff;
+    font-size: 1.0rem;
+    font-weight: bold;
+    letter-spacing: 1.5;
+}
+
+#gigs .gig-all a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- ABOUT--- */
+
+#about {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    border-top: 1px solid graytext;
+    border-bottom: 1px solid graytext;    
+}
+
+#about article {
+    width: calc(100% / 3);
+
+}
+
+#about h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#about p {
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1.7em;
+    color: #d5d5d5;
+    
+}
+
+#about a {
+    color: #d1d1d1;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+#about a:hover {
+    text-decoration: underline;
+}
+
+#about img {
+    width: 100%;
+    height: auto;
+}
+
+#about em {
+    display: block;
+    padding-bottom: 25px;
+    padding-top: 5px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.0rem;
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+}
+
+#about article:nth-child(2) {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+/* --- FOOTER --- */
+footer {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    
+}
+
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+}
+
+
+footer a:hover {
+    color: #c1c1bb;
+}
+
+
+footer p {
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.0rem;
+    color: #e8e3e3;
+    letter-spacing: 0.2rem
+}
+
+
+/* Bouton Scroll to top – Retour en haut de page */
+
+.scrollup {
+	width: 20px;
+	height: 20px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	display: none;
+	color: white;
+	background-color: #3a3f51;
+	border: 1px solid #3a3f51;
+	font-size: 20px;
+	text-align: center;
+	line-height: 37px;
+}
+ 
+.scrollup:hover {
+	color: white;
+}

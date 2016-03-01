@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>ObsirailsApp</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+        <!-- polices : Google Fonts "Open Sans" -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+        
+        <!-- icones :  Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        
+       <!--   -->
+        
+      <%= csrf_meta_tags %>
+    </head>
+    
+    <body>
+         
+        <%= render "partials/nav" %>  
+    
+        <%= yield %>
+    
+        <%= render "partials/about" %>
+        <%= render "partials/footer" %>
+
+    </body>
+    
+</html>

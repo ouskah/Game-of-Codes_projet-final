@@ -1,0 +1,171 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* --- TITRE DU SITE --- */
+
+#website-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+#website-title h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 4em;
+    font-weight: 50px;
+    letter-spacing: 5px;
+}
+
+#website-title p {
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#636363;
+}
+
+
+
+/* --- VIDEOS --- */
+
+#videos-select {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    border-top: 1px solid graytext;
+    border-bottom: 1px solid graytext;
+}
+
+
+#videos-select article {
+    width: calc(100% / 3);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+#videos-select article:first-child {
+    display:flex;
+    flex-direction: column;
+    padding-right: 15px;
+}
+
+#videos-select article:nth-child(2) {
+    display:flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid graytext;
+    border-right: 1px solid graytext;
+}
+
+#videos-select article:nth-child(3) {
+    display:flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+#videos-select img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#videos-select a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+#videos-select a:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+
+/* --- UPCOMING GIGS --- */
+
+#gigs {
+    margin-bottom: 50px;
+    border-top: 1px solid graytext;
+}
+
+#gigs a { 
+    text-decoration: none; 
+}
+
+#gigs article:hover { 
+    text-decoration: underline;
+}
+
+#gigs article {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    border-bottom: 1px solid graytext;
+}
+
+.gig-infos {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#gigs h5 {
+    font-weight: 600;
+    font-size: 1.0rem;
+    padding: 20px 15px 20px 15px;
+    color: #d5d5d5;
+    flex-basis: 30px;
+    letter-spacing: normal;
+    text-transform: uppercase;
+}
+
+#gigs strong {
+    font-size: 2.0rem;
+    font-weight: bold;
+    flex-basis: 80px;
+    letter-spacing: normal;
+}
+
+#gigs em {
+    font-style: normal;
+    font-size: 1.5rem;
+    text-transform: none;
+    font-weight: bold;
+    color: #d5d5d5;
+    flex-basis: 350px;
+    letter-spacing: normal;
+}
+
+#gigs p {
+    text-transform: none;
+    color: #e0dddd;
+    letter-spacing: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: right;
+    margin-left: 200px;
+}
+
+.gig-all {
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.gig-all a {
+    color: #ffffff;
+    font-size: 1.0rem;
+    font-weight: bold;
+    letter-spacing: 1.5;
+}
+
+#gigs .gig-all a:hover {
+    text-decoration: underline;
+}
