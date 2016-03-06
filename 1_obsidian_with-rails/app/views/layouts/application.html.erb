@@ -5,6 +5,7 @@
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
+       
         <!-- polices : Google Fonts "Open Sans" -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
         
@@ -17,14 +18,17 @@
     </head>
     
     <body>
-         
+       
         <%= render "partials/nav" %>  
     
+     
         <%= yield %>
     
         <%= render "partials/about" %>
         <%= render "partials/footer" %>
 
+       <a href="#" title="Haut de page" class="scrollup"><i class="fa fa-arrow-up"></i></a>
+   
     </body>
     
 </html>

@@ -8,8 +8,8 @@ Réalisation du blog d'un groupe de musique
 
 ##### Cahier des charges
 * Intégration de la Home Page du blog en vous basant sur la maquette “Obsidian”
-* Un effet “smooth scroll” à coder en JS pur ou à ajouter en jquery
-* Un back-end en Ruby on Rails (+ 2e version en Meteor.js) pour ajouter les articles de votre blog
+* Un effet “ smooth scroll ” à coder en JS pur ou à ajouter en jquery
+* Un back-end en Ruby on Rails pour ajouter les articles de votre blog
     - Les utilisateurs devront pouvoir :
         - Modifier et supprimer un article
         - Avoir un accès à l'admin du site. Vous pouvez au choix protéger cet accès avec un mdp ou avec un système de compte.

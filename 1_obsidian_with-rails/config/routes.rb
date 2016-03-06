@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-    get 'news/index'
 
-    get "home"          =>           'pages#home'
+   
+    
+    root 'pages#home'
+
+    get "news"          =>           'news#index'
+    
+    post "news"         =>            "news#new"
+    
+    devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

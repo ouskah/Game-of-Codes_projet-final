@@ -299,6 +299,16 @@ ul a {
     padding-bottom: 10px;
 }
 
+#about h1 a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+
+
 #about p {
     text-transform: none;
     font-weight: 400;
@@ -345,6 +355,74 @@ ul a {
 }
 
 
+/* --- NEWS --- */
+
+#news-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.0rem;
+    text-align: center;
+}
+
+
+#news {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.news-all {
+    width: 70%;
+}
+
+
+.news-last {
+    width: 30%;     
+    
+}
+
+
+.news-list {
+    font-size: 2.0rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.news-list-2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.news-content {
+    color: #fbfbfb;
+    font-family: monospace;
+    font-size: 1.5;
+}
+
+em {
+    font-size: 1.0rem;
+    color: white;
+    
+}
+
+#news-connexion {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;    
+}
+
+#news-connexion h5{
+    display:inline-block;    
+}
+
+#news-connexion span {
+       
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
 /* --- FOOTER --- */
 footer {
     padding-top: 20px;
@@ -380,7 +458,7 @@ footer p {
 
 .scrollup {
 	width: 20px;
-	height: 20px;
+	height: 30px;
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
@@ -390,7 +468,7 @@ footer p {
 	border: 1px solid #3a3f51;
 	font-size: 20px;
 	text-align: center;
-	line-height: 37px;
+	line-height: 27px;
 }
  
 .scrollup:hover {
