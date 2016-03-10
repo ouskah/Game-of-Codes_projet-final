@@ -1,15 +1,29 @@
 Rails.application.routes.draw do
-
+   
    
     
     root 'pages#home'
-
-    get "news"          =>           'news#index'
     
-    post "news"         =>            "news#new"
+    post "news"             =>              "news#new"
+        
+    get "news"              =>              "news#index"
+    
+    get "news/:id"          =>              "news#show"
+    
+    patch "news/:id"        =>              "news#update"
+    
+    delete "news/:id"       =>              "news#destroy"
     
     devise_for :users
-
+    
+    
+    resources :news
+    
+    
+    
+    
+    
+    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

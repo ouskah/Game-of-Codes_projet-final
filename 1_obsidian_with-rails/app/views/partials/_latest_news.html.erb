@@ -1,0 +1,15 @@
+
+<div>
+
+
+    <% @latest_news.each do |n| %>    
+        <span class="news-list-2"><%= n.title %></span>
+        <span class="news-list-2"> |    
+            <em><%= n.created_at.to_date.to_formatted_s(:long_ordinal) %></em>    
+        </span> 
+
+        <p class="news-list-2 news-content"><%= n.content %></p>  -----  ----- <br> <br>
+
+    <% end %>
+
+</div>

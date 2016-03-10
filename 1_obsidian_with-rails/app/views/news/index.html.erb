@@ -1,57 +1,76 @@
-
-   
-   <div class="container">
-    <h1 id="news-title">Liste des News</h1>
-    
-    <hr>
-    
-    <div id="news">
-        <div class="news-all">
-           
-            <p class="news-list"> ALL NEWS </p>
-          
-            <% @news.each do |n| %>    
-                     
-                    <span class="news-list-2"><%= n.title %></span>
-                    <span class="news-list-2"> | 
-                        <em><%= n.created_at.to_date.to_formatted_s(:long_ordinal) %></em>    
-                    </span>
-                    <p class="news-list-2 news-content"><%= n.content %></p>  <br>
-
-            <% end %>
-        </div>
-
-        <div class="news-last">
-            <span class="news-list"> LATEST NEWS </span>
-        </div>
-    </div> <!-- /news -->
-    
-    
-    <hr>
-    <p class="news-list">Nouvelle News </p>
-
-    <div id="news-connexion">
+  <div class="container">
        
-        <!-- <div class="news-all"> -->  
+        <h1 id="news-title">Liste des News</h1>
 
-            <%= form_tag "/news", method: "post" do %>
-                <h5><%= text_field_tag :title, "", :placeHolder => "Pseudo" %></h5>
-                <h5><%= text_field_tag :title, "", :placeHolder => "Titre de la News" %></h5>
-                <h4><%= text_area_tag :content, "", :placeHolder => "Contenu de la News"%></h4>
-                <h5><%= submit_tag "Ajouter une News"  %></h5>
-                 <% if user_signed_in? %>
-                   <p><em> <strong>Vous êtes connecté</strong> </em></p>
-                   <span class="btn btn-default"> <%= link_to "Log out", destroy_user_session_path, method: :delete %> </span> <br><br><br>
-                 <% else %>
-                   <p><em> <strong>Vous devez être connecté pour publier une News</strong> </em></p>
-                   <span class="btn btn-default"> <%= link_to "Login", new_user_session_path %></span>
-                   <span class="btn btn-default"> <%= link_to "Sign up", new_user_registration_path %></span>
-                 <% end %>     
+        <hr>
+
+        <div id="news">
+            <div class="news-all">
+
+                <p class="news-list"> ALL NEWS </p>
                 
-            <% end %>
-        <!-- </div> -->
-   
-     </div>
+                
+                <% @news.each do |n| %>    
+
+                        <% if user_signed_in? %>
+                            <span class="news-list-2"><%= n.title %></span>
+                            <span class="news-list-2"> |    
+                                <em><%= n.created_at.to_date.to_formatted_s(:long_ordinal) %></em>    
+                            </span> 
+
+                                <span class="news-list-2"> | <a href="/news/<%= n.id %>"> Show </a></span> <br> 
+
+                            <p class="news-list-2 news-content"><%= n.content %></p>  -----  ----- <br> <br>
+                        
+                        <% else %>
+                            <span class="news-list-2"><%= n.title %></span>
+                            <span class="news-list-2"> |    
+                                <em><%= n.created_at.to_date.to_formatted_s(:long_ordinal) %></em>    
+                            </span>
+                            <p class="news-list-2 news-content"><%= n.content %></p>  -----  ----- <br>
+                        <% end %>
+                        
+
+                <% end %>
+                
+                <%= paginate @news %>
+                
+            </div>
+
+            <div class="news-last">
+                <p class="news-list"> LATEST NEWS </p>
+                <%= render 'partials/latest_news', :latest_news => @latest_news %>                
+            </div>
+
+        </div> <!-- /news -->
+        
+       
+        
+
+        <hr>
+        <p class="news-list">Nouvelle News </p>
+
+        <div id="news-connexion">
+
+            <!-- <div class="news-all"> -->  
+
+                <%= form_tag "/news", method: "post" do %>
+                    <h5><%= text_field_tag :title, "", :placeHolder => "Titre de la News" %></h5> <br>
+                    <h5><%= text_area_tag :content, "", :placeHolder => "Contenu de la News"%></h5> <br>
+                    <h5><%= submit_tag "Ajouter une News"  %></h5>
+                     <% if user_signed_in? %>
+                       <p><em> <strong>Vous êtes connecté</strong> </em></p>
+                       <span class="btn btn-default"> <%= link_to "Log out", destroy_user_session_path, method: :delete %> </span> <br><br><br>
+                     <% else %>
+                       <p><em> <strong>Vous devez être connecté pour publier une News</strong> </em></p>
+                       <span class="btn btn-default"> <%= link_to "Login", new_user_session_path %></span>
+                       <span class="btn btn-default"> <%= link_to "Sign up", new_user_registration_path %></span>
+                     <% end %>     
+
+                <% end %>
+            <!-- </div> -->
+
+        </div>
     
 </div>
 

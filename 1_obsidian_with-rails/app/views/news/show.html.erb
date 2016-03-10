@@ -1,0 +1,26 @@
+<div class="container">
+
+    <h4 class="news-list-2"> News n° <%= "#{@news.id}" %> </h4>    
+    
+    <%= form_tag "/news/#{@news.id}", method: "patch" do %>
+        <h5><%= text_field_tag :title, @news.title %></h5>
+        <h5><%= text_area_tag :content, @news.content %></h5> <br>
+    <h5><%= @news.errors[:title].first %></h5> <br>
+        <h5><%= submit_tag "Udpate News n° #{@news.id}"  %></h5>
+    <% end %>
+ 
+    <%= form_tag "/news/#{@news.id}", method: "delete" do %>
+    <h5> <%= submit_tag "Delete News n° #{@news.id}", data: { confirm: 'Are you sure?' } %> </h5> 
+    <% end %>
+    
+    
+    
+    
+    <br>
+    
+    
+    <p><%= @news.errors[:title].first %></p>
+   
+    <h6 class="news-list-2">Back to <a href="/news">All News</a></h6> <br>
+    
+</div>

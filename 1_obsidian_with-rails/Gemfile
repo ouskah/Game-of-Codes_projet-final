@@ -30,8 +30,26 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'font-awesome-sass-rails', '~> 3.0', '>= 3.0.2.2'
 
 
-# devise
+# authentification avec devise
 gem 'devise', '~> 3.5', '>= 3.5.6'
+
+
+# devise-views avec bootstrap
+gem 'devise-bootstrap-views', '~> 0.0.8'
+
+# authorisation / gestion des roles avec cancan
+gem 'cancan', '~> 1.6', '>= 1.6.10'
+
+# pagination avec kaminari
+gem 'kaminari', '~> 0.16.3'
+
+# kaminari avec bootstrap
+gem 'kaminari-bootstrap', '~> 3.0', '>= 3.0.1'
+
+
+
+# system d'administration
+# gem 'administrate', '~> 0.1.4'
 
 
 # Use ActiveModel has_secure_password

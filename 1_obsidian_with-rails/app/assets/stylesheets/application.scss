@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "font-awesome";
 @import "bootstrap";
+@import "devise_bootstrap_views";
 
 
 /* --- GLOBAL --- */
@@ -395,10 +396,17 @@ ul a {
     text-align: left;
 }
 
+.news-list-2 a:hover {
+    color: #c1c1bb;
+}
+
+
+
 .news-content {
     color: #fbfbfb;
     font-family: monospace;
     font-size: 1.5;
+    margin-top: 10px;
 }
 
 em {
